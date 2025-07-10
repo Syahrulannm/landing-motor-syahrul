@@ -18,11 +18,19 @@ window.onload = () => {
 };
 
 //Tombol Humbleger Responsive HP
-const toggleBtn = document.getElementById("toggleBtn");
+const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-toggleBtn.addEventListener("click", () => {
+// Toggle menu saat tombol hamburger diklik
+hamburgerBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
+});
+
+// Tutup menu saat link di dalam nav diklik
+document.querySelectorAll("#mobileMenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
 });
 
 // <!-- AOS Script -->
