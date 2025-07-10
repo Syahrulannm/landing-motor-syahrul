@@ -18,11 +18,11 @@ window.onload = () => {
 };
 
 //Tombol Humbleger Responsive HP
-const hamburgerBtn = document.getElementById("hamburgerBtn");
+const toggleBtn = document.getElementById("toggleBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-// Toggle menu saat tombol hamburger diklik
-hamburgerBtn.addEventListener("click", () => {
+//Tombol menu saat tombol humberger diklik
+toggleBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
