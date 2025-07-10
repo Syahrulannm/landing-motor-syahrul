@@ -34,5 +34,15 @@ document.querySelectorAll("#mobileMenu a").forEach((link) => {
 });
 
 // <!-- AOS Script -->
+AOS.init({
+  once: false,
+  duration: 800,
+  easing: "ease-in-out",
+});
 
-AOS.init();
+// Set delay responsif
+const isMobile = window.innerWidth < 640;
+
+document.querySelectorAll("[data-aos]").forEach((el, i) => {
+  el.setAttribute("data-aos-delay", isMobile ? i * 40 : i * 100);
+});
